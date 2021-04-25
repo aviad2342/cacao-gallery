@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'ZenDots';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/ZenDots-Regular.ttf');
+}

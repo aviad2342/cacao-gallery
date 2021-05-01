@@ -4,3 +4,34 @@
   font-weight: normal;
   src: url('src/assets/fonts/ZenDots-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Yoav';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/Yoav.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/Rubik.ttf');
+}
+
+@font-face {
+  font-family: 'Karantina';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/Karantina-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'choco';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/choco.ttf');
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

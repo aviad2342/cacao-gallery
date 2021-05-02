@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   videos: Video[];
   private videosSubscription: Subscription;
+  responsive = true;
+  cols = 1;
   ytiframeHtml: any;
   vimeoIframeHtml: any;
   thumbnail = 'https://dummyimage.com/600x400/000/fff&text=bla';

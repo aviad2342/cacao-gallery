@@ -1,0 +1,9 @@
+
+.container {
+  background: #9e9e9e;
+}
+mat-grid-list {
+  background: transparent;
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -55,6 +55,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { registerLocaleData } from '@angular/common';
+import { MatGridListResponsiveModule } from './lib/mat-grid-list-responsive/mat-grid-list-responsive.module';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -109,7 +110,8 @@ registerLocaleData(localeHe, 'he-HE');
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListResponsiveModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'he-HE' }

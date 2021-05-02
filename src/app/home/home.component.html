@@ -1,12 +1,14 @@
-<p>home works!</p>
+
 <!-- <div [innerHtml]="ytiframeHtml"></div>
 <div [innerHtml]="vimeoIframeHtml"></div>
 <div [innerHtml]="player1"></div>
 <div [innerHtml]="player2"></div> -->
 
 <!-- <img [src]="thumbnail" alt=""> -->
-<mat-grid-list role="list" cols="3" rowHeight="1:1">
-  <mat-grid-tile role="listitem" *ngFor="let video of videos">
-    <app-video-item [video]="video"></app-video-item>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+  <mat-grid-list rowHeight="1:1" [gutterSize]="'20px'" [responsive]="responsive" (responsiveColsChange)="cols = $event">
+    <mat-grid-tile *ngFor="let video of videos">
+      <app-video-item [video]="video"></app-video-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

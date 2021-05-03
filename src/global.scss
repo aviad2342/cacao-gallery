@@ -1,0 +1,67 @@
+
+mat-icon {
+  &[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1.7em;
+    height: 1.7em;
+  }
+
+  &[class*="custom-facebook"] {
+    mask-image: url(./assets/icons/facebook.svg);
+  }
+
+  &[class*="custom-facebookIcon"] {
+    mask-image: url(./assets/icons/facebookIcon.svg);
+  }
+
+  &[class*="custom-instagram"] {
+    mask-image: url(./assets/icons/instagram.svg);
+  }
+
+  &[class*="custom-instagramIcon"] {
+    mask-image: url(./assets/icons/instagramIcon.svg);
+  }
+
+  &[class*="custom-youtube"] {
+    mask-image: url(./assets/icons/youtube.svg);
+  }
+
+  &[class*="custom-youtubeIcon"] {
+    mask-image: url(./assets/icons/youtubeIcon.svg);
+  }
+
+  &[class*="custom-whatsapp"] {
+    mask-image: url(./assets/icons/whatsapp.svg);
+  }
+
+  &[class*="custom-whatsappIcon"] {
+    mask-image: url(./assets/icons/whatsappIcon.svg);
+  }
+
+  &[class*="custom-twitter"] {
+    mask-image: url(./assets/icons/twitter.svg);
+  }
+
+  &[class*="custom-twitterIcon"] {
+    mask-image: url(./assets/icons/twitterIcon.svg);
+  }
+
+  &[class*="custom-vimeo"] {
+    mask-image: url(./assets/icons/vimeo.svg);
+  }
+
+  &[class*="custom-vimeoIcon"] {
+    mask-image: url(./assets/icons/vimeoIcon.svg);
+  }
+
+  &[class*="custom-pinterest"] {
+    mask-image: url(./assets/icons/pinterest.svg);
+  }
+
+  &[class*="custom-pinterestIcon"] {
+    mask-image: url(./assets/icons/pinterestIcon.svg);
+  }
+}

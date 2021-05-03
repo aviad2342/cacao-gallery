@@ -1,0 +1,20 @@
+
+mat-sidenav {
+  background: #212121;
+  text-align: center;
+  width: 60px;
+}
+
+/* mat-sidenav .mat-drawer-inner-container {
+  background: #212121;
+  overflow: hidden !important;
+} */
+
+.nav-icon {
+  color: goldenrod;
+}
+
+svg#chart {
+  background: transparent;
+}
+#chart line {stroke: rgb(238, 190, 69); stroke-width:1}

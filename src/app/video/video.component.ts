@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
+  responsive = true;
+  cols = 1;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -56,6 +56,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { registerLocaleData } from '@angular/common';
 import { MatGridListResponsiveModule } from './lib/mat-grid-list-responsive/mat-grid-list-responsive.module';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -74,6 +75,7 @@ registerLocaleData(localeHe, 'he-HE');
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     EmbedVideo.forRoot(),
     BrowserAnimationsModule,
     MatAutocompleteModule,

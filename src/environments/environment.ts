@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  LOCALHOST: 'aviadbenhayun.com' // 'localhost'
+  LOCALHOST: 'localhost' // 'localhost'
 };
 
 /*

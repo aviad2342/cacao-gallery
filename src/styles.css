@@ -42,3 +42,10 @@ mat-sidenav .mat-drawer-inner-container {
   overflow: hidden !important;
 }
 
+.success {
+  background: rgb(24, 221, 24);
+}
+
+.danger {
+  background: red;
+}

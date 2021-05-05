@@ -1,0 +1,9 @@
+
+.add-video-form {
+  text-align: center;
+  height: 100%;
+}
+
+.input-not-valid {
+  color: red;
+}

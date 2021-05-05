@@ -57,6 +57,9 @@ import { MatTableModule } from '@angular/material/table';
 import { registerLocaleData } from '@angular/common';
 import { MatGridListResponsiveModule } from './lib/mat-grid-list-responsive/mat-grid-list-responsive.module';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -69,7 +72,8 @@ registerLocaleData(localeHe, 'he-HE');
     AddVideoComponent,
     EditVideoComponent,
     VideoItemComponent,
-    ViewVideoComponent
+    ViewVideoComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +81,7 @@ registerLocaleData(localeHe, 'he-HE');
     HttpClientModule,
     FormsModule,
     EmbedVideo.forRoot(),
+    FlexLayoutModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatCheckboxModule,
@@ -113,7 +118,8 @@ registerLocaleData(localeHe, 'he-HE');
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    MatGridListResponsiveModule
+    MatGridListResponsiveModule,
+    LayoutModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'he-HE' }

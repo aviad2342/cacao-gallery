@@ -1,0 +1,59 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  text-align: center;
+  width: 60px;
+}
+
+.sidenav .mat-toolbar {
+  justify-content: center;
+  border: 1px solid goldenrod;
+  background: inherit;
+}
+
+/* .tollbar-logo {
+  border: 8px solid goldenrod;
+} */
+
+.nav-icon {
+  color: goldenrod;
+}
+
+svg#chart {
+  background: transparent;
+}
+#chart line {stroke: rgb(238, 190, 69); stroke-width:1}
+
+.tollbar-name {
+  font-family: ZenDots;
+  float: left;
+}
+
+.tabs {
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+.active-link {
+  color: goldenrod;
+  border-bottom: 2px solid;
+}
+
+.spacer {
+  flex: 1 1 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 10%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

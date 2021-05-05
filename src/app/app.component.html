@@ -1,8 +1,8 @@
-<app-toolbar></app-toolbar>
-<mat-sidenav-container>
+<!-- <app-toolbar></app-toolbar>
+<mat-sidenav-container class="sidenav-container">
 
-<mat-sidenav position="end" mode="side" opened>
-  <svg id="chart" width="40" height="35%">
+<mat-sidenav position="end" mode="side" opened fixedInViewport="true">
+  <svg id="chart" width="40" height="60%">
     <line x1="20" y1="0" x2="20" y2="600"></line>
   </svg>
   <br>
@@ -29,4 +29,9 @@
     <router-outlet></router-outlet>
 </main>
 </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+<app-main-nav>
+  <main>
+    <router-outlet></router-outlet>
+</main>
+</app-main-nav>

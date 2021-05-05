@@ -1,6 +1,6 @@
 
 <!-- Toolbar -->
-<mat-toolbar>
+<mat-toolbar class="toolbar">
   <nav mat-tab-nav-bar ngClass="tabs">
     <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
     <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
@@ -11,12 +11,13 @@
     <mat-tab label="about us" [routerLink]="'video'"></mat-tab>
     <mat-tab label="Third"></mat-tab>
   </mat-tab-group> -->
-  <div class="spacer">
+  <span class="spacer">
     <svg id="chart" width="590" height="68">
       <line x1="0" y1="20" x2="590" y2="20"></line>
       <line x1="12" y1="0" x2="12" y2="70"></line>
     </svg>
-  </div>
+  </span>
+
   <span class="tollbar-name">CACAO - CREATIVE STUDIO</span>
   <img
   class="tollbar-logo"
@@ -24,11 +25,7 @@
   alt="Cacao Logo"
   src="https://i.vimeocdn.com/portrait/35044390_100x100.webp"
 />
-<!-- <div class="end-spacer">
-  <svg id="chart" width="12" height="32">
-    <line x1="0" y1="20" x2="190" y2="20"></line>
-  </svg>
-</div> -->
+
 </mat-toolbar>
 
 <!-- <mat-sidenav-container class="example-container">

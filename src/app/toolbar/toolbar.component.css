@@ -9,7 +9,7 @@
 }
 
 .spacer {
-  flex: 1;
+  flex: 1 1 auto;
   padding-left: 5px;
   padding-right: 5px;
   width: 10%;
@@ -40,18 +40,17 @@ svg#chart {
 .tollbar-logo {
   margin-left: 15px;
   padding-right: 5px;
+  float: left;
 }
 .toolbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgb(66, 64, 64);
-  color: white;
-  font-weight: 600;
+  z-index:10;
 }
 
 .tollbar-name {
@@ -59,26 +58,3 @@ svg#chart {
   float: left;
 }
 
-
-.toolbar img {
-  margin: 0 16px;
-  border-radius: 20px;
-}
-
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover {
-  opacity: 0.8;
-}
-
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
-}

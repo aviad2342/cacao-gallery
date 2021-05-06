@@ -17,6 +17,29 @@
   background: inherit;
 }
 
+.main-toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index:10;
+}
+
+.second-toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index:10;
+  padding: 0px !important;
+}
+
 /* .tollbar-logo {
   border: 8px solid goldenrod;
 } */
@@ -32,12 +55,28 @@ svg#chart {
 
 .tollbar-name {
   font-family: ZenDots;
-  float: left;
+  margin-left: 55px;
+}
+
+.tollbar-name-xs {
+  font-family: ZenDots;
+  font-size: medium;
+  margin-left: 55px;
+}
+
+.tollbar-name-sm {
+  font-family: ZenDots;
+  font-size: large;
+  margin-left: 55px;
 }
 
 .tabs {
   border-bottom: none;
   border-radius: 4px;
+}
+
+.tabs-small {
+  font-size: small;
 }
 
 .active-link {
@@ -47,9 +86,7 @@ svg#chart {
 
 .spacer {
   flex: 1 1 auto;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 10%;
+
 }
 
 .mat-toolbar.mat-primary {

@@ -1,4 +1,28 @@
-<mat-sidenav-container class="sidenav-container">
+<div fxLayout="column" fxFlexFill>
+  <mat-toolbar class="main-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="start center" >
+    <nav mat-tab-nav-bar ngClass="tabs" fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
+      <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
+   </nav>
+   <span class="spacer">
+  </span>
+    <span fxHide fxShow.xs class="tollbar-name-xs">CACAO - CREATIVE STUDIO</span>
+    <span fxHide fxShow.sm class="tollbar-name-sm">CACAO - CREATIVE STUDIO</span>
+    <span fxHide fxShow.md class="tollbar-name">CACAO - CREATIVE STUDIO</span>
+    <span fxHide fxShow.lg class="tollbar-name">CACAO - CREATIVE STUDIO</span>
+    <span fxHide fxShow.xl class="tollbar-name">CACAO - CREATIVE STUDIO</span>
+  </mat-toolbar>
+
+  <mat-toolbar *ngIf="deviceXs" style="padding: 0px;" class="second-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="center center" >
+    <nav mat-tab-nav-bar ngClass="tabs-small" fxLayout="row" fxShow="true" fxShow.gt-sm>
+      <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
+      <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
+   </nav>
+  </mat-toolbar>
+
+<mat-sidenav-container  class="sidenav-container" fxFlex autosize class="background">
   <mat-sidenav #drawer position="end" mode="side" opened class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
     <mat-toolbar>
@@ -32,16 +56,9 @@
     </svg>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="main-toolbar">
-      <nav mat-tab-nav-bar ngClass="tabs">
-        <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
-        <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
-        <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
-     </nav>
-     <span class="spacer">
-    </span>
-      <span class="tollbar-name">CACAO - CREATIVE STUDIO</span>
-    </mat-toolbar>
-    <ng-content></ng-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
+</div>

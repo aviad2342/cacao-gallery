@@ -10,12 +10,24 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class MainNavComponent {
 
+  deviceXs: boolean;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small
+    ]).subscribe(result => {
+      this.deviceXs = result.matches;
+      console.log(result);
+      if (result.matches) {
+        console.log(result);
+      }
+    });
+  }
 
 }

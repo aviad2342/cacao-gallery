@@ -7,3 +7,15 @@
 .input-not-valid {
   color: red;
 }
+
+.video-thumbnail-img {
+  width: 300px;
+  height: 200px;
+  border: 1px solid gray;
+  object-fit: contain;
+  background: black;
+}
+
+/* .form-input-field {
+  font-family: ZenDots;
+} */

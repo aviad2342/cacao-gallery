@@ -1,10 +1,11 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="add-video-form">
 
   <div fxLayout="column" fxLayoutAlign="center center">
-    <img src="https://dummyimage.com/300x200/000/fff" alt="">
+    <img [src]="thumbnail" alt="" class="video-thumbnail-img">
     <mat-form-field appearance="legacy">
-      <mat-label>כותרת</mat-label>
+      <mat-label class="form-input-field">כותרת</mat-label>
       <input matInput placeholder="כותרת"
+      class="form-input-field"
       type="text"
       ngModel
       name="title"
@@ -15,43 +16,49 @@
     </mat-form-field>
 
     <mat-form-field appearance="legacy">
-      <mat-label>תאור</mat-label>
+      <mat-label class="form-input-field">תאור</mat-label>
       <input matInput placeholder="תאור"
+      class="form-input-field"
       type="text"
       ngModel
       name="description"
       required
       #descriptionCtrl="ngModel">
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint *ngIf="!titleNameCtrl.valid && titleNameCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
+      <mat-hint *ngIf="!descriptionCtrl.valid && descriptionCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
     </mat-form-field>
 
     <mat-form-field appearance="legacy">
-      <mat-label>קישור</mat-label>
+      <mat-label class="form-input-field">קישור</mat-label>
       <input matInput placeholder="הדבק קישור"
+      class="form-input-field"
       type="text"
       ngModel
       name="videoURL"
       required
       #videoURLCtrl="ngModel"
-      (onChange)="onUrlChange($event)">
+      (change)="onUrlChange($event)">
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint *ngIf="!titleNameCtrl.valid && titleNameCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
+      <mat-hint *ngIf="!videoURLCtrl.valid && videoURLCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
     </mat-form-field>
 
     <mat-form-field appearance="legacy">
-      <mat-label>קטגוריה</mat-label>
+      <mat-label class="form-input-field">קטגוריה</mat-label>
       <mat-select
+      matInput
+      class="form-input-field"
       type="text"
       ngModel
       name="category"
       required
       #categoryCtrl="ngModel"
       >
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+        <mat-option class="form-input-field" value="one">עיצוב גרפים</mat-option>
+        <mat-option class="form-input-field" value="two">עיצוב רקעים</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
+
+  <button mat-button type="submit" [disabled]="!f.valid">הוסף</button>
 
 </form>

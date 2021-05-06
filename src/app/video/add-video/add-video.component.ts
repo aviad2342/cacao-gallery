@@ -18,6 +18,7 @@ export class AddVideoComponent implements OnInit {
   embed = '';
   thumbnail = 'https://www.geirangerfjord.no/upload/images/2018_general/film-and-vid.jpg';
   activeUrl = '';
+  isValidUrl = true;
 
   constructor(
     private embedService: EmbedVideoService,
@@ -29,27 +30,33 @@ export class AddVideoComponent implements OnInit {
 
   ngOnInit(): void {
     this.activeUrl = this.router.url;
-    this.appService.presentToast('הסרטון נשמר בהצלחה', true);
   }
 
   onUrlChange(event) {
-    if (event.detail.value && this.thumbnail !==  event.detail.value) {
-     this.videoId = this.getVideoID(event.detail.value);
+    if (event.target.value && this.thumbnail !==  event.target.value) {
+     this.videoId = this.getVideoID(event.target.value);
     }
   }
 
-  getVideoID(videoURL: string){
-    if (videoURL.includes('v=')) {
-      this.thumbnail = `https://img.youtube.com/vi/${videoURL.split('v=')[1].split('&')[0]}/sddefault.jpg`;
+  getVideoID(videoURL: string) {
+
+    this.embedService.embed_image(videoURL, { image: 'maxresdefault' }).then(res => {
+      this.thumbnail = res.link;
+      });
+
+    this.embed = this.embedService.embed(videoURL).changingThisBreaksApplicationSecurity;
+
+    if (videoURL.includes('www.youtube.com/watch?v=')) {
+      this.isValidUrl = true;
       return videoURL.split('v=')[1].split('&')[0];
     } else if (videoURL.includes('/embed/')) {
-      this.thumbnail = `https://img.youtube.com/vi/${videoURL.split('/embed/')[videoURL.split('/embed/').length - 1]}/sddefault.jpg`;
+      this.isValidUrl = true;
       return videoURL.split('/embed/')[videoURL.split('/embed/').length - 1];
     } else if (videoURL.includes('vimeo')) {
-      // this.videoService...(videoURL.replace('https://vimeo.com/', '')).subscribe(thumbnail => {
-      //   this.thumbnail = thumbnail;
-      // });
+      this.isValidUrl = true;
       return videoURL.replace('https://vimeo.com/', '');
+    } else {
+      this.isValidUrl = false;
     }
   }
 

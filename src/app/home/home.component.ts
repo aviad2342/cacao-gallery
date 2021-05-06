@@ -48,11 +48,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.player1 = this.embedService.embed_youtube(this.youtubeId);
     this.player2 = this.embedService.embed_vimeo(this.vimeoId);
 
-    // console.log(this.embedService.embed(this.vimeoUrl));
-    // console.log(this.embedService.embed(this.youtubeUrl));
+    console.log(this.embedService.embed(this.vimeoUrl).changingThisBreaksApplicationSecurity);
+    console.log(this.embedService.embed(this.youtubeUrl));
 
-    // console.log(this.embedService.embed_vimeo(this.vimeoId));
-    // console.log(this.embedService.embed_youtube(this.youtubeId));
+    console.log(this.embedService.embed_vimeo(this.vimeoId));
+    console.log(this.embedService.embed_youtube(this.youtubeId));
 
 
   }

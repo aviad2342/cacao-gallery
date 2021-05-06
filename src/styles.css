@@ -49,3 +49,8 @@ mat-sidenav .mat-drawer-inner-container {
 .danger {
   background: red;
 }
+
+.form-input-field {
+  font-family: choco;
+  font-size: large;
+}

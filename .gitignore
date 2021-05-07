@@ -4,8 +4,6 @@
 /dist
 /tmp
 /out-tsc
-/src/**/**/**/*.wav
-src/**/*.wav
 # Only exists if Bazel was run
 /bazel-out
 

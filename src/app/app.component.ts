@@ -13,12 +13,12 @@ export class AppComponent implements OnInit, OnDestroy {
   deviceXs: boolean;
 
   constructor( public mediaObserver: MediaObserver) {}
-
   ngOnInit() {
-    this.mediaSub = this.mediaObserver.media$.subscribe((res: MediaChange) => {
-      this.deviceXs = res.mqAlias === 'xs' ? true : false;
-    });
+    // this.mediaSub = this.mediaObserver.media$.subscribe((res: MediaChange) => {
+    //   this.deviceXs = res.mqAlias === 'xs' ? true : false;
+    // });
   }
+
   ngOnDestroy() {
     this.mediaSub.unsubscribe();
   }

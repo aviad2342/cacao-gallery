@@ -9,6 +9,15 @@ mat-icon {
     height: 1.7em;
   }
 
+  &[class*="input-icon-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1.7em;
+    height: 1em;
+  }
+
   &[class*="custom-facebook"] {
     mask-image: url(./assets/icons/facebook.svg);
   }
@@ -64,4 +73,37 @@ mat-icon {
   &[class*="custom-pinterestIcon"] {
     mask-image: url(./assets/icons/pinterestIcon.svg);
   }
+
+  &[class*="input-icon-title"] {
+    mask-image: url(./assets/icons/title.svg);
+  }
+
+  &[class*="input-icon-desciption"] {
+    mask-image: url(./assets/icons/desciption.svg);
+  }
+
+  &[class*="input-icon-videoDescription"] {
+    mask-image: url(./assets/icons/videoDescription.svg);
+  }
+
+  &[class*="input-icon-url"] {
+    mask-image: url(./assets/icons/url.svg);
+  }
+
+  &[class*="input-icon-urllink"] {
+    mask-image: url(./assets/icons/urllink.svg);
+  }
+
+  &[class*="input-icon-videoTitle"] {
+    mask-image: url(./assets/icons/videoTitle.svg);
+  }
+
+  &[class*="input-icon-category"] {
+    mask-image: url(./assets/icons/category.svg);
+  }
+
+  &[class*="input-icon-websiteurl"] {
+    mask-image: url(./assets/icons/websiteurl.svg);
+  }
+
 }

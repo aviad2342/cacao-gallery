@@ -1,14 +1,10 @@
-
-<!-- <div [innerHtml]="ytiframeHtml"></div>
-<div [innerHtml]="vimeoIframeHtml"></div>
-<div [innerHtml]="player1"></div>
-<div [innerHtml]="player2"></div> -->
-
-<!-- <img [src]="thumbnail" alt=""> -->
 <div class="container">
-  <mat-grid-list rowHeight="1:1" [gutterSize]="'20px'" [responsive]="responsive" (responsiveColsChange)="cols = $event">
+  <button mat-mini-fab class="mat-icon-rtl-mirror" (click)="toggleVolume()" color="accent" aria-label="השתק">
+    <mat-icon>{{ volume }}</mat-icon>
+  </button>
+  <mat-grid-list rowHeight="1:1" [gutterSize]="'1px'" [responsive]="responsive" (responsiveColsChange)="cols = $event">
     <mat-grid-tile *ngFor="let video of videos">
-      <app-video-item [video]="video"></app-video-item>
+      <app-video-item [video]="video" (click)="playVideo(video.videoURL)"></app-video-item>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

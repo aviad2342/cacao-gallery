@@ -1,9 +1,18 @@
 
 .container {
   background: #9e9e9e;
+  height: 100%;
 }
 mat-grid-list {
   background: transparent;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+mat-grid-tile {
+  padding-right: 0 !important;
+}
+
+app-video-item {
+  cursor: pointer;
 }

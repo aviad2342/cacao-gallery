@@ -1,3 +1,9 @@
+.card-image {
+  width: 300px;
+  height: 200px;
+  background: black;
+  object-fit: fill;
+}
 
 mat-card-title {
   font-family: 'choco';
@@ -5,4 +11,5 @@ mat-card-title {
 
 mat-card-subtitle {
   font-family: 'choco';
+  margin-bottom: 0px !important;
 }

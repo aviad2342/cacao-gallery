@@ -1,7 +1,7 @@
 
 .add-video-form {
+  margin-top: 20px;
   text-align: center;
-  height: 100%;
 }
 
 .input-not-valid {
@@ -11,11 +11,30 @@
 .video-thumbnail-img {
   width: 300px;
   height: 200px;
-  border: 1px solid gray;
+  border: 1px solid black;
   object-fit: contain;
   background: black;
 }
 
+.mat-form-input-field {
+  width: 20%;
+}
+
+.mat-form-input-field-large {
+  width: 30%;
+}
+
+.mat-form-input-field-medium {
+  width: 35%;
+}
+
+.mat-form-input-field-small {
+  width: 50%;
+}
+
+.mat-form-input-field-xsmall {
+  width: 90%;
+}
 /* .form-input-field {
   font-family: ZenDots;
 } */

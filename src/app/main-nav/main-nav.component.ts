@@ -23,10 +23,6 @@ export class MainNavComponent {
       Breakpoints.Small
     ]).subscribe(result => {
       this.deviceXs = result.matches;
-      console.log(result);
-      if (result.matches) {
-        console.log(result);
-      }
     });
   }
 

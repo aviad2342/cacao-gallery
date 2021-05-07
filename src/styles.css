@@ -9,7 +9,21 @@
   font-family: 'Yoav';
   font-style: normal;
   font-weight: normal;
-  src: url('src/assets/fonts/Yoav.ttf');
+  src: url('src/assets/fonts/Yoav.TTF');
+}
+
+@font-face {
+  font-family: 'Yoav-bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Yoav-bold.TTF');
+}
+
+@font-face {
+  font-family: 'Abraham';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Abraham-Regular.ttf');
 }
 
 @font-face {
@@ -52,5 +66,10 @@ mat-sidenav .mat-drawer-inner-container {
 
 .form-input-field {
   font-family: choco;
+  font-size: large;
+}
+
+.form-submit-button {
+  font-family: Abraham;
   font-size: large;
 }

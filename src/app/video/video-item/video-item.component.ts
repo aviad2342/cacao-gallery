@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Video } from '../video.model';
-import Lity from 'lity';
 
 @Component({
   selector: 'app-video-item',
@@ -14,10 +13,6 @@ export class VideoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onOpenVideo() {
-    Lity('https://vimeo.com/470929774');
   }
 
 }

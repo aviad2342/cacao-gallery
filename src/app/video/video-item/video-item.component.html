@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>{{ video.title }}</mat-card-title>
   <mat-card-subtitle>{{ video.date | date}}</mat-card-subtitle>
-  <img [src]="video.thumbnail" mat-card-image (click)="onOpenVideo()">
+  <img class="card-image" [src]="video.thumbnail" mat-card-image>
   <mat-card-footer>{{ video.description }}</mat-card-footer>
 </mat-card>

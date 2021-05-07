@@ -28,6 +28,10 @@
   z-index:10;
 }
 
+main {
+  height: 100%;
+}
+
 .second-toolbar {
   position: relative;
   top: 0;

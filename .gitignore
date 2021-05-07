@@ -4,7 +4,8 @@
 /dist
 /tmp
 /out-tsc
-/src/assets/audio/Hans_Zimmer_Time.wav
+/src/**/**/**/*.wav
+src/**/*.wav
 # Only exists if Bazel was run
 /bazel-out
 

@@ -1,4 +1,26 @@
 
+@import '~@swimlane/ngx-datatable/index.scss';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+.datatable-cell-padding {
+  vertical-align: middle !important;
+  padding: 5px !important;
+  align-self: center;
+  cursor: pointer;
+}
+
+.datatable-header-padding {
+  vertical-align: middle !important;
+  padding: 5px !important;
+  font-family: Choco-bold;
+  font-size: large !important;
+  color: #e6b948;
+  background: #212121;
+}
+
 mat-icon {
   &[class*="custom-"] {
     mask-size: contain;

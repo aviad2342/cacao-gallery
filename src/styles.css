@@ -47,6 +47,13 @@
   src: url('src/assets/fonts/choco.ttf');
 }
 
+@font-face {
+  font-family: 'Choco-bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/fonts/Choco-bold.TTF');
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

@@ -1,14 +1,77 @@
 
 <div class="container">
-  <mat-grid-list rowHeight="1:1" [gutterSize]="'20px'" [responsive]="responsive" (responsiveColsChange)="cols = $event">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-  </mat-grid-list>
+
+  <section>
+    <div class="action-button-row" layout="row" layout-align="start start">
+      <button mat-stroked-button color="primary" (click)="onAddVideo()">הוסף</button>
+      <button mat-stroked-button color="secondary" (click)="onViewVideo()" [disabled]="!isRowSelected">פרטים</button>
+      <button mat-stroked-button color="amber" (click)="onEditVideo()" [disabled]="!isRowSelected">ערוך</button>
+      <button mat-stroked-button color="warn" (click)="onDeleteVideo()" [disabled]="!isRowSelected">מחק</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="action-button-row">
+      <mat-form-field  appearance="legacy">
+        <mat-label class="form-input-field">חפש סירטון</mat-label>
+        <input matInput placeholder="חפש סירטון"
+        class="form-input-field"
+        type="text"
+        (keyup)="filterVideos($event)">
+        <mat-icon matSuffix>filter_alt</mat-icon>
+      </mat-form-field>
+    </div>
+  </section>
+
+  <ngx-datatable
+  #testimoniesTable
+  [rows]="videos"
+  class="bootstrap expandable"
+  [rowHeight]="'auto'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [messages]="{emptyMessage:'אין נתונים להצגה', totalMessage: 'total', selectedMessage: 'selected'}"
+  [limit]="50"
+  [columnMode]="columnMode.standard"
+  [selected]="selected"
+  [limit]="10"
+  [selectionType]="SelectionType.single"
+  [sorts]="[{ prop: 'category', dir: 'aesc' }]"
+  (select)="onSelect($event)"
+>
+
+<ngx-datatable-column headerClass="datatable-header-padding" cellClass="datatable-cell-padding" name="" [sortable]="false" [width]="80" [resizeable]="false">
+  <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+    <img class="img-thumbnail" [src]="row['thumbnail']" alt="">
+  </ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column headerClass="datatable-header-padding" cellClass="datatable-cell-padding" name="title" [width]="160" [resizeable]="false">
+  <ng-template let-column="column" ngx-datatable-header-template><strong>כותרת</strong></ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column headerClass="datatable-header-padding" cellClass="datatable-cell-padding" name="category" [width]="170" [resizeable]="false">
+  <ng-template class="mobile-hidden" let-column="column" ngx-datatable-header-template><strong>קטגוריה</strong></ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column headerClass="datatable-header-padding" cellClass="datatable-cell-padding" name="description" [width]="360" [resizeable]="false">
+  <ng-template class="mobile-hidden" let-column="column" ngx-datatable-header-template><strong>תאור</strong></ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column headerClass="datatable-header-padding" cellClass="datatable-cell-padding" name="date" [sortable]="true" [width]="160" [resizeable]="false">
+  <ng-template let-column="column" ngx-datatable-header-template><strong>תאריך</strong></ng-template>
+  <ng-template class="mobile-hidden" let-row="row" let-value="value" ngx-datatable-cell-template>
+    {{ row['date'] | date }}
+  </ng-template>
+</ngx-datatable-column>
+
+  <ngx-datatable-footer #datatableFooter>
+    <ng-template ngx-datatable-footer-template
+    let-rowCount="rowCount"
+    let-selectedCount="selectedCount"
+    >
+    <div>&nbsp;נבחר {{ selectedCount }}  מתוך {{ rowCount }} סרטונים </div>
+    </ng-template>
+  </ngx-datatable-footer>
+</ngx-datatable>
 </div>

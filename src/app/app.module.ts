@@ -60,6 +60,7 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -83,6 +84,7 @@ registerLocaleData(localeHe, 'he-HE');
     EmbedVideo.forRoot(),
     FlexLayoutModule,
     BrowserAnimationsModule,
+    NgxDatatableModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,

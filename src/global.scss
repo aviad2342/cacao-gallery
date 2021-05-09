@@ -1,9 +1,9 @@
-
 @import '~@swimlane/ngx-datatable/index.scss';
 @import '~@swimlane/ngx-datatable/themes/material.scss';
 @import '~@swimlane/ngx-datatable/themes/dark.scss';
 @import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
 @import '~@swimlane/ngx-datatable/assets/icons.css';
+
 
 .datatable-cell-padding {
   vertical-align: middle !important;
@@ -37,6 +37,15 @@ mat-icon {
     mask-repeat: no-repeat;
     background: currentColor;
     width: 1.7em;
+    height: 1em;
+  }
+
+  &[class*="button-icon-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
     height: 1em;
   }
 
@@ -90,6 +99,14 @@ mat-icon {
 
   &[class*="custom-pinterest"] {
     mask-image: url(./assets/icons/pinterest.svg);
+  }
+
+  &[class*="button-icon-add-video"] {
+    mask-image: url(./assets/icons/add-video.svg);
+  }
+
+  &[class*="button-icon-addVideo"] {
+    mask-image: url(./assets/icons/addVideo.svg);
   }
 
   &[class*="custom-pinterestIcon"] {

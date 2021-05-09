@@ -1,71 +1,76 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="add-video-form">
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="add-video-form">
 
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <img [src]="thumbnail" alt="" class="video-thumbnail-img">
-    <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
-      <mat-label class="form-input-field">כותרת</mat-label>
-      <input matInput placeholder="כותרת"
-      class="form-input-field"
-      type="text"
-      ngModel
-      name="title"
-      required
-      #titleNameCtrl="ngModel">
-      <mat-icon matSuffix class="input-icon-videoTitle"></mat-icon>
-      <mat-hint *ngIf="!titleNameCtrl.valid && titleNameCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
-    </mat-form-field>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="thumbnail" alt="" class="video-thumbnail-img">
+      <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
+        <mat-label class="form-input-field">כותרת</mat-label>
+        <input matInput placeholder="כותרת"
+        class="form-input-field"
+        type="text"
+        ngModel
+        name="title"
+        required
+        #titleNameCtrl="ngModel">
+        <mat-icon matSuffix class="input-icon-videoTitle"></mat-icon>
+        <mat-hint *ngIf="!titleNameCtrl.valid && titleNameCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
+      </mat-form-field>
 
-    <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
-      <mat-label class="form-input-field">תאור</mat-label>
-      <textarea matInput placeholder="תאור"
-      class="form-input-field"
-      type="text"
-      ngModel
-      matTextareaAutosize
-      name="description"
-      required
-      #descriptionCtrl="ngModel"></textarea>
-      <mat-icon matSuffix class="input-icon-videoDescription"></mat-icon>
-      <mat-hint *ngIf="!descriptionCtrl.valid && descriptionCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
-    </mat-form-field>
+      <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
+        <mat-label class="form-input-field">תאור</mat-label>
+        <textarea matInput placeholder="תאור"
+        class="form-input-field"
+        type="text"
+        ngModel
+        matTextareaAutosize
+        name="description"
+        required
+        #descriptionCtrl="ngModel"></textarea>
+        <mat-icon matSuffix class="input-icon-videoDescription"></mat-icon>
+        <mat-hint *ngIf="!descriptionCtrl.valid && descriptionCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
+      </mat-form-field>
 
-    <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
-      <mat-label class="form-input-field">קישור</mat-label>
-      <input matInput placeholder="הדבק קישור"
-      class="form-input-field"
-      type="text"
-      ngModel
-      name="videoURL"
-      pattern="https:\/\/vimeo.com\/\d{4,10}(?=\b|\/) || ^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+"
-      required
-      #videoURLCtrl="ngModel"
-      (change)="onUrlChange($event)"
-      >
-      <mat-icon matSuffix class="input-icon-urllink"></mat-icon>
-      <mat-hint *ngIf="!videoURLCtrl.valid && videoURLCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
-    </mat-form-field>
+      <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
+        <mat-label class="form-input-field">קישור</mat-label>
+        <input matInput placeholder="הדבק קישור"
+        class="form-input-field"
+        type="text"
+        ngModel
+        name="videoURL"
+        pattern="https:\/\/vimeo.com\/\d{4,10}(?=\b|\/) || ^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+"
+        required
+        #videoURLCtrl="ngModel"
+        (change)="onUrlChange($event)"
+        >
+        <mat-icon matSuffix class="input-icon-urllink"></mat-icon>
+        <mat-hint *ngIf="!videoURLCtrl.valid && videoURLCtrl.touched"><small class="input-not-valid">זהו שדה חובה!</small></mat-hint>
+      </mat-form-field>
 
-    <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
-      <mat-label class="form-input-field">קטגוריה</mat-label>
-      <mat-select
-      matInput
-      class="form-input-field"
-      type="text"
-      ngModel
-      name="category"
-      required
-      #categoryCtrl="ngModel"
-      >
-        <mat-option class="form-input-field" value="עיצוב גרפים">עיצוב גרפים</mat-option>
-        <mat-option class="form-input-field" value="עיצוב רקעים">עיצוב רקעים</mat-option>
-        <mat-option class="form-input-field" value="עיצוב פונטים">עיצוב פונטים</mat-option>
-        <mat-option class="form-input-field" value="אנימציות">אנימציות</mat-option>
-        <mat-option class="form-input-field" value="גיפים">גיפים</mat-option>
-      </mat-select>
-      <mat-icon matSuffix class="input-icon-category"></mat-icon>
-    </mat-form-field>
-  </div>
+      <mat-form-field [ngClass]="formFieldClass" appearance="legacy">
+        <mat-label class="form-input-field">קטגוריה</mat-label>
+        <mat-select
+        matInput
+        class="form-input-field"
+        type="text"
+        ngModel
+        name="category"
+        required
+        #categoryCtrl="ngModel"
+        >
+          <mat-option class="form-input-field" value="עיצוב גרפים">עיצוב גרפים</mat-option>
+          <mat-option class="form-input-field" value="עיצוב רקעים">עיצוב רקעים</mat-option>
+          <mat-option class="form-input-field" value="עיצוב פונטים">עיצוב פונטים</mat-option>
+          <mat-option class="form-input-field" value="אנימציות">אנימציות</mat-option>
+          <mat-option class="form-input-field" value="גיפים">גיפים</mat-option>
+        </mat-select>
+        <mat-icon matSuffix class="input-icon-category"></mat-icon>
+      </mat-form-field>
+    </div>
 
-  <button mat-button type="submit" class="form-submit-button" [disabled]="!f.valid">הוסף</button>
+    <div class="form-submit-buttons" fxLayout="row" fxLayoutAlign="space-evenly center">
+      <button mat-stroked-button type="submit" class="form-submit-button" [disabled]="!f.valid">הוסף</button>
+      <button mat-stroked-button type="button" (click)="onCancel()" class="form-submit-button">ביטול</button>
+    </div>
 
-</form>
+  </form>
+</div>

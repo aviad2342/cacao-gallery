@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'video', component: VideoComponent },
   { path: 'video/new', component: AddVideoComponent },
-  { path: 'video/edit', component: EditVideoComponent },
-  { path: 'video', component: VideoComponent },
+  { path: 'video/edit/:id', component: EditVideoComponent },
+  { path: 'video/view', component: VideoComponent },
 ];
 
 

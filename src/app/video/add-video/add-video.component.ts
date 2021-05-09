@@ -125,4 +125,9 @@ export class AddVideoComponent implements OnInit {
     });
   }
 
+  onCancel() {
+    this.appService.presentToast('הפעולה בוטלה', true);
+    this.location.back();
+  }
+
 }

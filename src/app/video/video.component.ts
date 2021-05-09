@@ -65,15 +65,15 @@ async onAddVideo() {
   this.selectedVideoId = null;
   this.isRowSelected = false;
   this.selected = [];
-  this.router.navigate(['manage', 'videos', 'new']);
+  this.router.navigate(['video', 'new']);
 }
 
 async onViewVideo() {
-  this.router.navigate(['manage', 'videos', 'view', this.selectedVideoId]);
+  this.router.navigate(['video', 'view', this.selectedVideoId]);
 }
 
 async onEditVideo() {
-  this.router.navigate(['manage', 'videos', 'edit', this.selectedVideoId]);
+  this.router.navigate(['video', 'edit', this.selectedVideoId]);
 }
 
 async onDeleteVideo() {

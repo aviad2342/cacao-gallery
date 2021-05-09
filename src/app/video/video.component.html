@@ -3,10 +3,10 @@
 
   <section>
     <div class="action-button-row" layout="row" layout-align="start start">
-      <button mat-stroked-button color="primary" (click)="onAddVideo()">הוסף</button>
-      <button mat-stroked-button color="secondary" (click)="onViewVideo()" [disabled]="!isRowSelected">פרטים</button>
-      <button mat-stroked-button color="amber" (click)="onEditVideo()" [disabled]="!isRowSelected">ערוך</button>
-      <button mat-stroked-button color="warn" (click)="onDeleteVideo()" [disabled]="!isRowSelected">מחק</button>
+      <button class="app-action-button app-button-prim" mat-raised-button color="prim" (click)="onAddVideo()"><mat-icon class="button-icon-addVideo"></mat-icon> הוסף</button>
+      <button class="app-action-button app-button-secondary" mat-raised-button color="secondary" (click)="onViewVideo()" [disabled]="!isRowSelected"><mat-icon class="icon-align">article</mat-icon>פרטים</button>
+      <button class="app-action-button app-button-warning" mat-raised-button color="warning" (click)="onEditVideo()" [disabled]="!isRowSelected"><mat-icon class="icon-align">edit_note</mat-icon>ערוך</button>
+      <button class="app-action-button" mat-raised-button color="warn" (click)="onDeleteVideo()" [disabled]="!isRowSelected"><mat-icon class="icon-align">delete_forever</mat-icon>מחק</button>
     </div>
   </section>
 

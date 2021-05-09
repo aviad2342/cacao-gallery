@@ -79,4 +79,22 @@ mat-sidenav .mat-drawer-inner-container {
 .form-submit-button {
   font-family: Abraham;
   font-size: large;
+  margin: 8px 8px 8px 8px;
+}
+
+.app-action-button {
+  font-family: choco-bold;
+  font-size: large;
+}
+
+.app-button-prim {
+  background: green;
+}
+
+.app-button-warning {
+  background: orange;
+}
+
+.app-button-secondary {
+  background: cornflowerblue;
 }

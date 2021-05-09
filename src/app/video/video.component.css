@@ -26,6 +26,11 @@ ngx-datatable {
   margin: 8px 8px 8px 8px;
 }
 
+.icon-align {
+  height: 26px !important;
+  padding-left: 3px;
+}
+
 /* @media screen and (max-width: 800px) {
   .desktop-hidden {
     display: initial;

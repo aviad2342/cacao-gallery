@@ -61,6 +61,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -74,7 +75,8 @@ registerLocaleData(localeHe, 'he-HE');
     EditVideoComponent,
     VideoItemComponent,
     ViewVideoComponent,
-    MainNavComponent
+    MainNavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -5,10 +5,12 @@ import { HomeComponent } from './home/home.component';
 import { VideoComponent } from './video/video.component';
 import { AddVideoComponent } from './video/add-video/add-video.component';
 import { EditVideoComponent } from './video/edit-video/edit-video.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'video', component: VideoComponent },
   { path: 'video/new', component: AddVideoComponent },
   { path: 'video/edit/:id', component: EditVideoComponent },

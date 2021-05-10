@@ -30,9 +30,10 @@
 
 main {
   height: 100%;
+  background: #3a3939;
 }
 
-.second-toolbar {
+/* .second-toolbar {
   position: relative;
   top: 0;
   left: 0;
@@ -42,7 +43,22 @@ main {
   align-items: center;
   z-index:10;
   padding: 0px !important;
+} */
+
+@media screen and (max-width: 400px) {
+  .second-toolbar {
+    align-items: flex-start;
+    place-content: start !important;
+    padding: 0px !important;
+  }
 }
+
+@media screen and (max-width: 400px) {
+  .nav-link {
+    font-size: small;
+  }
+}
+
 
 /* .tollbar-logo {
   border: 8px solid goldenrod;

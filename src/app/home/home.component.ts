@@ -16,39 +16,41 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   private videosSubscription: Subscription;
   responsive = true;
   volume = 'volume_up';
+  volumeBtnTitle = 'השתק';
   cols = 1;
-  audio = new Audio();
+  audioPauseTime: number;
+  audio = new Audio('../../assets/audio/Hans_Zimmer_Time.wav');
   ytiframeHtml: any;
   vimeoIframeHtml: any;
   thumbnail = 'https://dummyimage.com/600x400/000/fff&text=bla';
 
-  vimeoUrl = 'https://vimeo.com/470929774';
-  youtubeUrl = 'https://www.youtube.com/watch?v=iHhcHTlGtRs';
+  // vimeoUrl = 'https://vimeo.com/470929774';
+  // youtubeUrl = 'https://www.youtube.com/watch?v=iHhcHTlGtRs';
 
-  vimeoId = '470929774';
-  youtubeId = 'iHhcHTlGtRs';
-  player1 = 'x20qnej';
-  player2 = 'x20qnej';
+  // vimeoId = '470929774';
+  // youtubeId = 'iHhcHTlGtRs';
+  // player1 = 'x20qnej';
+  // player2 = 'x20qnej';
 
   constructor(
     private embedService: EmbedVideoService,
     private videoService: VideoService
      ) {
 
-    this.ytiframeHtml = this.embedService.embed(this.youtubeUrl);
-    this.vimeoIframeHtml = this.embedService.embed(this.vimeoUrl);
-    this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs', { image: 'thumbnail_medium' }).then(res => {
-    this.thumbnail = res.link;
-    });
-    console.log(this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs'));
+    // this.ytiframeHtml = this.embedService.embed(this.youtubeUrl);
+    // this.vimeoIframeHtml = this.embedService.embed(this.vimeoUrl);
+    // this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs', { image: 'thumbnail_medium' }).then(res => {
+    // this.thumbnail = res.link;
+    // });
+    // console.log(this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs'));
 
-    this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs', { image: 'thumbnail_medium' }).then(res => {
-    this.thumbnail = res.link;
-    });
+    // this.embedService.embed_image('https://www.youtube.com/watch?v=iHhcHTlGtRs', { image: 'thumbnail_medium' }).then(res => {
+    // this.thumbnail = res.link;
+    // });
     // console.log(this.embedService.embed_image('https://vimeo.com/470929774'));
     // Lity('https://vimeo.com/470929774');
-    this.player1 = this.embedService.embed_youtube(this.youtubeId);
-    this.player2 = this.embedService.embed_vimeo(this.vimeoId);
+    // this.player1 = this.embedService.embed_youtube(this.youtubeId);
+    // this.player2 = this.embedService.embed_vimeo(this.vimeoId);
 
     // console.log(this.embedService.embed(this.vimeoUrl).changingThisBreaksApplicationSecurity);
     // console.log(this.embedService.embed(this.youtubeUrl));
@@ -59,22 +61,25 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.videoService.getVideos().subscribe();
+    if (this.audio) {
+      this.audio.play();
+    }
   }
 
   toggleVolume() {
     if (this.volume === 'volume_up') {
       this.audio.pause();
+      this.volumeBtnTitle = 'נגן';
       this.volume = 'volume_off';
     } else {
       this.audio.play();
       this.volume = 'volume_up';
+      this.volumeBtnTitle = 'השתק';
     }
   }
 
   ngOnInit(): void {
-      this.audio.src = '../../assets/audio/Hans_Zimmer_Time.wav';
       this.audio.volume = 0.1;
-      this.audio.load();
       this.audio.play();
       this.videosSubscription = this.videoService.videos.subscribe(videos => {
       this.videos = videos;
@@ -85,11 +90,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     if (this.volume === 'volume_up') {
       this.audio.pause();
       this.volume = 'volume_off';
+      this.volumeBtnTitle = 'נגן';
     }
     const lity = Lity(url);
   }
 
   ngOnDestroy() {
+    this.audio.pause();
     if (this.videosSubscription) {
       this.videosSubscription.unsubscribe();
     }

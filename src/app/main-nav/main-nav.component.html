@@ -1,8 +1,8 @@
 <div fxLayout="column" fxFlexFill>
   <mat-toolbar class="main-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="start center" >
     <nav mat-tab-nav-bar ngClass="tabs" fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
-      <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
+      <a mat-tab-link routerLink="video" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link routerLink="about" routerLinkActive="active-link">ABOUT ME</a>
       <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
    </nav>
    <span class="spacer">
@@ -14,11 +14,11 @@
     <span fxHide fxShow.xl class="tollbar-name">CACAO - CREATIVE STUDIO</span>
   </mat-toolbar>
 
-  <mat-toolbar *ngIf="deviceXs" style="padding: 0px;" class="second-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="center center" >
+  <mat-toolbar *ngIf="deviceXs" style="padding: 0px;" ngClass="second-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="center center" >
     <nav mat-tab-nav-bar ngClass="tabs-small" fxLayout="row" fxShow="true" fxShow.gt-sm>
-      <a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">CONTACT</a>
-      <a mat-tab-link routerLink="video" routerLinkActive="active-link">ABOUT ME</a>
-      <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
+      <a mat-tab-link ngClass="nav-link" routerLink="video" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link ngClass="nav-link" routerLink="about" routerLinkActive="active-link">ABOUT ME</a>
+      <a mat-tab-link ngClass="nav-link" routerLink="home" routerLinkActive="active-link">HOME</a>
    </nav>
   </mat-toolbar>
 
@@ -37,19 +37,19 @@
       <line x1="20" y1="0" x2="20" y2="600"></line>
     </svg>
     <br>
-    <a href="https://www.facebook.com/CacaoCreative/" target="_blank"><mat-icon class="custom-facebookIcon nav-icon"></mat-icon></a>
+    <a href="https://www.facebook.com/CacaoCreative/" title="facebook" target="_blank"><mat-icon class="custom-facebookIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://www.instagram.com/cacao_creative" target="_blank"><mat-icon class="custom-instagramIcon nav-icon"></mat-icon></a>
+    <a href="https://www.instagram.com/cacao_creative" title="instagram" target="_blank"><mat-icon class="custom-instagramIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://www.youtube.com/channel/UCvjuoslQ785WyL5yz0M92HQ" target="_blank"><mat-icon class="custom-youtubeIcon nav-icon"></mat-icon></a>
+    <a href="https://www.youtube.com/channel/UCvjuoslQ785WyL5yz0M92HQ" title="youtube" target="_blank"><mat-icon class="custom-youtubeIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://wa.me/+972545728166" target="_blank"><mat-icon class="custom-whatsappIcon nav-icon"></mat-icon></a>
+    <a href="https://wa.me/+972545728166" title="whatsapp" target="_blank"><mat-icon class="custom-whatsappIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://twitter.com" target="_blank"><mat-icon class="custom-twitterIcon nav-icon"></mat-icon></a>
+    <a href="https://twitter.com" title="twitter" target="_blank"><mat-icon class="custom-twitterIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://vimeo.com/user91903245" target="_blank"><mat-icon class="custom-vimeoIcon nav-icon"></mat-icon></a>
+    <a href="https://vimeo.com/user91903245" title="vimeo" target="_blank"><mat-icon class="custom-vimeoIcon nav-icon"></mat-icon></a>
     <br>
-    <a href="https://www.pinterest.com/" target="_blank"><mat-icon class="custom-pinterestIcon nav-icon"></mat-icon></a>
+    <a href="https://www.pinterest.com/" title="pinterest" target="_blank"><mat-icon class="custom-pinterestIcon nav-icon"></mat-icon></a>
     <br>
     <svg id="chart" width="40" height="100%">
       <line x1="20" y1="0" x2="20" y2="600"></line>

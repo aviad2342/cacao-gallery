@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <button mat-mini-fab class="mat-icon-rtl-mirror" (click)="toggleVolume()" color="accent" aria-label="השתק">
     <mat-icon>{{ volume }}</mat-icon>
   </button>
@@ -7,4 +7,15 @@
       <app-video-item [video]="video" (click)="playVideo(video.videoURL)"></app-video-item>
     </mat-grid-tile>
   </mat-grid-list>
+</div> -->
+<div fxLayout="row" fxLayoutAlign="flex-start">
+  <button mat-mini-fab class="mat-icon-rtl-mirror vol-btn" (click)="toggleVolume()" [title]="volumeBtnTitle" color="accent" aria-label="השתק">
+    <mat-icon>{{ volume }}</mat-icon>
+  </button>
+</div>
+
+<div class="container" dir="rtl" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+  <ng-container *ngFor="let video of videos">
+    <app-video-item [video]="video" (click)="playVideo(video.videoURL)"></app-video-item>
+  </ng-container>
 </div>

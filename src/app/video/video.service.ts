@@ -35,21 +35,21 @@ export class VideoService {
   }
 
   getVideos() {
-    return this.http.get<Video[]>(`http://${LOCALHOST}:3000/video/videos`)
+    return this.http.get<Video[]>(`http://${LOCALHOST}:3200/video/videos`)
     .pipe(tap(resDta => {
       this._videos.next(resDta);
     }));
   }
 
   getVideo(id: string) {
-    return this.http.get<Video>(`http://${LOCALHOST}:3000/video/${id}`)
+    return this.http.get<Video>(`http://${LOCALHOST}:3200/video/${id}`)
     .pipe(tap(resDta => {
       return resDta;
     }));
   }
 
   addVideo(video: Video) {
-    return this.http.post<Video>(`http://${LOCALHOST}:3000/video/video`,
+    return this.http.post<Video>(`http://${LOCALHOST}:3200/video/video`,
     {
       ...video
     }).
@@ -76,7 +76,7 @@ export class VideoService {
       date:        video.date,
       thumbnail:   video.thumbnail
       };
-    return this.http.put<Video>(`http://${LOCALHOST}:3000/video/update/${video.id}`,
+    return this.http.put<Video>(`http://${LOCALHOST}:3200/video/update/${video.id}`,
     {
       ...videoObj
     }).
@@ -95,7 +95,7 @@ export class VideoService {
   }
 
   deleteVideo(id: string) {
-    return this.http.delete(`http://${LOCALHOST}:3000/video/delete/${id}`).
+    return this.http.delete(`http://${LOCALHOST}:3200/video/delete/${id}`).
     pipe(
       switchMap(resData => {
         return this.getVideos();

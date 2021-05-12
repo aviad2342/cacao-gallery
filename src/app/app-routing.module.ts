@@ -9,12 +9,13 @@ import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'video', component: VideoComponent },
   { path: 'video/new', component: AddVideoComponent },
   { path: 'video/edit/:id', component: EditVideoComponent },
-  { path: 'video/view', component: VideoComponent },
+  { path: 'video/view', component: VideoComponent }
 ];
 
 

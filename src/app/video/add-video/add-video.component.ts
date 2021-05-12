@@ -22,7 +22,7 @@ export class AddVideoComponent implements OnInit {
   deviceXs: boolean;
   deviceMd: boolean;
   // thumbnail = 'https://image.freepik.com/free-vector/open-clapper-board-with-film-strip-background-design_1017-26102.jpg';
-  thumbnail = '../../../assets/images/film-background-image.jpg';
+  thumbnail = 'http://aviadbenhayun.com:3000/images/1620749294644@film-background-image.jpg.jpg';
   activeUrl = '';
   isValidUrl = true;
 

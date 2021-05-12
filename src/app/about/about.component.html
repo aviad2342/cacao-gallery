@@ -6,19 +6,27 @@ gdRows="auto auto auto">
 <div gdArea="header" fxLayoutAlign="center center">
   Header
  </div>
-<div gdArea="side">
-<img class="side" src="../../assets/images/osri.jpg">
- </div>
-<div gdArea="content" >
-  <mat-list>
-    <mat-list-item>Item 1</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 2</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 3</mat-list-item>
-  </mat-list>
+ <div gdArea="side" fxLayoutAlign="start start">
+  <div gdArea="side" class="side" fxLayoutAlign="start start">
+    <img class="side-image" src="https://cacao-studio.co.il/wp-content/uploads/2019/07/20170804_110737-e1564060340421.jpg">
+     </div>
+    <div gdArea="content" fxLayoutAlign="start start" class="content">
+      <mat-list>
+        <mat-list-item class="list-item"><strong class="strong-lb">specialization</strong>: animation</mat-list-item>
+        <mat-divider class="divider"></mat-divider>
+        <mat-list-item class="list-item"><strong class="strong-lb">date of birth</strong>: {{ date | date:'mediumDate':'':'en'}}</mat-list-item>
+        <mat-divider class="divider"></mat-divider>
+        <mat-list-item class="list-item"><strong class="strong-lb">education</strong>: tiltan-school of design</mat-list-item>
+        <mat-divider class="divider"></mat-divider>
+        <mat-list-item class="list-item"><strong class="strong-lb">hobby</strong>: football</mat-list-item>
+        <mat-divider class="divider"></mat-divider>
+      </mat-list>
+    </div>
 </div>
+
 <div gdArea="footer" fxLayoutAlign="center center">
-  Footer
 </div>
 </div>
+<footer fxLayoutAlign="center center">
+  © Cacao - Creative studio 2021 / All rights reserved
+</footer>

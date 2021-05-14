@@ -2,18 +2,21 @@
 @media screen and (max-width: 2559px) {
   .container {
     margin-right: 20px;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 959px) {
   .container {
     margin-right: 15px;
+    height: 100%;
   }
 }
 /* small size viewport */
 @media screen and (max-width: 599px) {
   .container {
     margin-right: 5px;
+    height: 100%;
   }
 }
 
@@ -21,6 +24,7 @@
   top: 43px;
   right: 12px;
   position: fixed;
+  z-index: 1;
 }
 
 /* small size viewport */
@@ -29,6 +33,7 @@
     top: 35px;
     right: 2px;
     position: fixed;
+    z-index: 1;
   }
 }
 

@@ -21,7 +21,7 @@ export class EditVideoComponent implements OnInit {
   videoId = '';
   embed = '';
   formFieldClass = 'bb';
-  thumbnail = '../../../assets/images/film-background-image.jpg';
+  thumbnail = 'http://aviadbenhayun.com:3000/images/1620749294644@film-background-image.jpg.jpg';
   isValidUrl = true;
   isLoading = false;
 

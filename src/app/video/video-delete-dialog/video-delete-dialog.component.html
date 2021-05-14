@@ -1,0 +1,12 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-toolbar class="dialog-toolbar">
+    <span class="dialog-title">מחיקת סירטון</span>
+  </mat-toolbar>
+<div mat-dialog-content>
+  <p class="dialog-content">אתה בטוח שברצונך למחוק את הסרטון?</p>
+</div>
+<div class="dialog-action" mat-dialog-actions layout="row" layout-align="center center" fxLayoutAlign="space-between center" >
+  <button mat-stroked-button class="dialog-action-button" (click)="onCancel()">ביטול</button>
+  <button mat-stroked-button class="dialog-action-button" (click)="onDeleteVideo()">מחק</button>
+</div>
+</div>

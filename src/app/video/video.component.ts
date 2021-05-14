@@ -1,9 +1,11 @@
 import { AfterViewInit } from '@angular/core';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ColumnMode, DatatableComponent, SelectionType } from '@swimlane/ngx-datatable';
 import { Subscription } from 'rxjs';
 import { AppService } from '../app.service';
+import { VideoDeleteDialogComponent } from './video-delete-dialog/video-delete-dialog.component';
 import { Video } from './video.model';
 import { VideoService } from './video.service';
 
@@ -15,6 +17,7 @@ import { VideoService } from './video.service';
 export class VideoComponent implements OnInit, OnDestroy, AfterViewInit {
 
   responsive = true;
+  isLoading = false;
   cols = 1;
   videos: Video[];
   selectedVideoId;
@@ -29,13 +32,19 @@ export class VideoComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private router: Router,
     public appService: AppService,
-    private videoService: VideoService
+    private videoService: VideoService,
+    public dialog: MatDialog
      ) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.videosSubscription = this.videoService.videos.subscribe(videos => {
       this.videos = videos;
       this.temp = [...videos];
+      this.isLoading = false;
+    }, error => {
+      this.isLoading = false;
+      this.appService.presentToast('תקלה לא ניתן לקבל את התוכן המבוקש!', false);
     });
   }
 
@@ -77,34 +86,20 @@ async onEditVideo() {
 }
 
 async onDeleteVideo() {
-    // const alert = await this.alertController.create({
-    //   cssClass: 'delete-video-alert',
-    //   header: 'אישור מחיקת סירטון',
-    //   message: `האם אתה בטוח שברצונך למחוק את הסירטון לצמיתות?`,
-    //   mode: 'ios',
-    //   buttons: [
-    //     {
-    //       text: 'ביטול',
-    //       role: 'cancel',
-    //       cssClass: 'delete-video-alert-btn-cancel',
-    //       handler: () => {
-    //       }
-    //     }, {
-    //       text: 'אישור',
-    //       handler: () => {
-    //         this.videoService.deleteVideo(this.selectedVideoId).subscribe( () => {
-    //           this.isRowSelected = false;
-    //           this.selectedVideoId = null;
-    //           this.selected = [];
-    //           this.appService.presentToast('הסירטון נמחקה בהצלחה!', true);
-    //         }, error => {
-    //           this.appService.presentToast('חלה תקלה פעולת המחיקה נכשלה!', false);
-    //         });
-    //       }
-    //     }
-    //   ]
-    // });
-    // await alert.present();
+  const dialogRef = this.dialog.open(VideoDeleteDialogComponent, {
+    width: '250px',
+    hasBackdrop: false
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    if (result) {
+      this.videoService.deleteVideo(this.selectedVideoId).subscribe(res => {
+        this.appService.presentToast('הסירטון נמחק בהצלחה!', true);
+      }, error => {
+        this.appService.presentToast('חלה תקלה הסירטון לא נמחק! אנא נסה שנית מאוחר יותר.', false);
+      } );
+    }
+  });
 }
 
 onSelect({ selected }) {

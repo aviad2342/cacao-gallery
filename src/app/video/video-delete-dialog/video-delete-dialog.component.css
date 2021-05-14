@@ -1,0 +1,27 @@
+
+.dialog-toolbar {
+  justify-content: center;
+  box-sizing: content-box;
+}
+
+.dialog-title {
+  text-align: center;
+  font-family: 'choco';
+  font-size: x-large;
+}
+
+.dialog-content {
+  text-align: center;
+  padding: 18px 2px 0px 2px;
+  font-family: 'choco';
+  font-size: large;
+}
+
+.dialog-action {
+  width: 100%;
+}
+
+.dialog-action-button {
+  font-family: 'Abraham';
+  font-size: large;
+}

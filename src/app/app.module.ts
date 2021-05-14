@@ -62,6 +62,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AboutComponent } from './about/about.component';
+import { VideoDeleteDialogComponent } from './video/video-delete-dialog/video-delete-dialog.component';
 
 registerLocaleData(localeHe, 'he-HE');
 
@@ -76,7 +77,8 @@ registerLocaleData(localeHe, 'he-HE');
     VideoItemComponent,
     ViewVideoComponent,
     MainNavComponent,
-    AboutComponent
+    AboutComponent,
+    VideoDeleteDialogComponent
   ],
   imports: [
     BrowserModule,

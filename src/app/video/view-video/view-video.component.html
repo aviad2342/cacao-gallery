@@ -1,1 +1,6 @@
-<p>view-video works!</p>
+<div class="spinner" *ngIf="isLoading" fxLayout="row" fxLayoutAlign="center center">
+  <mat-spinner></mat-spinner>
+</div>
+<div class="container" *ngIf="!isLoading">
+
+</div>

@@ -67,8 +67,22 @@ mat-sidenav .mat-drawer-inner-container {
   background: rgb(24, 221, 24);
 }
 
+.success span {
+  font-size: x-large !important;
+  font-family: 'Abraham' !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .danger {
   background: red;
+}
+
+.danger span {
+  font-size: x-large !important;
+  font-family: 'Abraham' !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-input-field {
@@ -97,4 +111,15 @@ mat-sidenav .mat-drawer-inner-container {
 
 .app-button-secondary {
   background: cornflowerblue;
+}
+
+.mat-menu-panel {
+  text-align: center;
+  width: 150px;
+  overflow: hidden !important;
+  border: 1px solid goldenrod;
+}
+
+.mat-menu-content {
+  padding: 5px;
 }

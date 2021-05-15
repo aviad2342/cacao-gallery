@@ -104,6 +104,11 @@ svg#chart {
   border-bottom: 2px solid;
 }
 
+.active-nav-link {
+  color: goldenrod;
+  font-size: larger;
+}
+
 .spacer {
   flex: 1 1 auto;
 
@@ -113,4 +118,61 @@ svg#chart {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.nav-icon:hover {
+  background-color: rgb(221, 198, 124);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+}
+
+.menu-button {
+  font-family: 'choco-bold';
+  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  margin-bottom: 12px;
+  border: 1px solid goldenrod;
+}
+
+.menu-button:hover {
+  background-color: transparent;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+}
+
+.tab-link:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+}
+
+.nav-link:hover {
+  background-color: gray;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
 }

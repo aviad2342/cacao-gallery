@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { Video } from '../video.model';
 import { VideoService } from '../video.service';
+import Lity from 'lity';
 
 @Component({
   selector: 'app-view-video',
@@ -49,6 +50,15 @@ export class ViewVideoComponent implements OnInit {
     });
 
     this.activeUrl = this.router.url;
+  }
+
+  onPlayVideo() {
+    Lity(this.video.videoURL);
+  }
+
+  onGoBack() {
+    // this.router.navigate(['video']);
+    this.location.back();
   }
 
 }

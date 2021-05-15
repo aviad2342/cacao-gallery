@@ -1,6 +1,21 @@
 <div class="spinner" *ngIf="isLoading" fxLayout="row" fxLayoutAlign="center center">
   <mat-spinner></mat-spinner>
 </div>
-<div class="container" *ngIf="!isLoading">
-
+<div class="container" fxLayout="row" fxLayoutAlign="center center" *ngIf="!isLoading">
+  <mat-card class="card">
+    <mat-card-title class="card-title">{{ video.title }}</mat-card-title>
+    <mat-card-subtitle class="card-subtitle">{{ video.date | date}}</mat-card-subtitle>
+    <mat-card-subtitle class="card-subtitle-category">{{ video.category }}</mat-card-subtitle>
+    <img class="card-image" [src]="video.thumbnail" mat-card-image>
+    <mat-card-content class="card-content">{{ video.description }}</mat-card-content>
+    <mat-card-actions class="card-action">
+      <button mat-stroked-button class="card-action-button" (click)="onGoBack()">
+        <mat-icon class="icon-align">arrow_forward</mat-icon>
+        חזור
+      </button>
+      <button mat-stroked-button class="card-action-button" (click)="onPlayVideo()">
+        נגן <mat-icon class="icon-align">smart_display</mat-icon>
+      </button>
+      </mat-card-actions>
+  </mat-card>
 </div>

@@ -1,9 +1,9 @@
 <div fxLayout="column" fxFlexFill>
   <mat-toolbar class="main-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="start center" >
     <nav mat-tab-nav-bar ngClass="tabs" fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <a mat-tab-link routerLink="video" routerLinkActive="active-link">MANAGE</a>
-      <a mat-tab-link routerLink="about" routerLinkActive="active-link">ABOUT ME</a>
-      <a mat-tab-link routerLink="home" routerLinkActive="active-link">HOME</a>
+      <a mat-tab-link class="tab-link" routerLink="contact" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link class="tab-link" routerLink="about" routerLinkActive="active-link">ABOUT ME</a>
+      <a mat-tab-link class="tab-link"routerLink="home" routerLinkActive="active-link">HOME</a>
    </nav>
    <span class="spacer">
   </span>
@@ -16,7 +16,7 @@
 
   <mat-toolbar *ngIf="deviceXs" style="padding: 0px;" ngClass="second-toolbar" class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="center center" >
     <nav mat-tab-nav-bar ngClass="tabs-small" fxLayout="row" fxShow="true" fxShow.gt-sm>
-      <a mat-tab-link ngClass="nav-link" routerLink="video" routerLinkActive="active-link">CONTACT</a>
+      <a mat-tab-link ngClass="nav-link" routerLink="contact" routerLinkActive="active-link">CONTACT</a>
       <a mat-tab-link ngClass="nav-link" routerLink="about" routerLinkActive="active-link">ABOUT ME</a>
       <a mat-tab-link ngClass="nav-link" routerLink="home" routerLinkActive="active-link">HOME</a>
    </nav>
@@ -31,9 +31,15 @@
         width="40"
         alt="Cacao Logo"
         src="https://i.vimeocdn.com/portrait/35044390_100x100.webp"
+        [matMenuTriggerFor]="menu"
       />
+      <mat-menu #menu="matMenu">
+        <button class="menu-button" mat-menu-item (click)="Login()"><mat-icon  class="icon-align">login</mat-icon>התחבר</button>
+        <button class="menu-button" mat-menu-item routerLink="video"><mat-icon  class="icon-align">manage_accounts</mat-icon>ניהול</button>
+        <button class="menu-button" mat-menu-item (click)="Logout()"><mat-icon routerLinkActive="active-nav-link" class="icon-align">logout</mat-icon>יציאה</button>
+      </mat-menu>
     </mat-toolbar>
-    <svg id="chart" width="40" height="40%">
+    <svg id="chart" width="40" height="33%">
       <line x1="20" y1="0" x2="20" y2="600"></line>
     </svg>
     <br>

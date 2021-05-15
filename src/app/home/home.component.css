@@ -2,21 +2,18 @@
 @media screen and (max-width: 2559px) {
   .container {
     margin-right: 20px;
-    height: 100%;
   }
 }
 
 @media screen and (max-width: 959px) {
   .container {
     margin-right: 15px;
-    height: 100%;
   }
 }
 /* small size viewport */
 @media screen and (max-width: 599px) {
   .container {
     margin-right: 5px;
-    height: 100%;
   }
 }
 
@@ -50,4 +47,16 @@ mat-grid-tile {
 app-video-item {
   cursor: pointer;
   margin-top: 32px;
+}
+
+app-video-item:hover {
+  background-color: rgb(227, 236, 225);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -ms-transition: all 5400ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
 }

@@ -7,12 +7,14 @@ import { AddVideoComponent } from './video/add-video/add-video.component';
 import { EditVideoComponent } from './video/edit-video/edit-video.component';
 import { AboutComponent } from './about/about.component';
 import { ViewVideoComponent } from './video/view-video/view-video.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'video', component: VideoComponent },
   { path: 'video/new', component: AddVideoComponent },
   { path: 'video/edit/:id', component: EditVideoComponent },

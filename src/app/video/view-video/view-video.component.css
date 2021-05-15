@@ -2,3 +2,49 @@
 .spinner {
   padding-top: 200px;
 }
+
+.container {
+  padding-top: 20px;
+}
+
+.card {
+  border: 1px solid #756d6d;
+}
+
+.card-image {
+  background: black;
+  object-fit: fill;
+  margin: 0px -16px 0px -16px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Yoav';
+  font-size: x-large;
+}
+
+.card-subtitle {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-subtitle-category {
+  font-family: 'Yoav';
+}
+
+.card-content {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-action {
+  text-align: center;
+}
+
+.card-action-button {
+  font-family: 'Abraham';
+  background: green;
+
+}

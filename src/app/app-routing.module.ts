@@ -8,11 +8,13 @@ import { EditVideoComponent } from './video/edit-video/edit-video.component';
 import { AboutComponent } from './about/about.component';
 import { ViewVideoComponent } from './video/view-video/view-video.component';
 import { ContactComponent } from './contact/contact.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
+  { path: 'auth', component: AuthComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'video', component: VideoComponent },

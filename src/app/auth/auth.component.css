@@ -1,0 +1,87 @@
+
+
+@media screen and (max-width: 260px) {
+  .card {
+    max-width: 87%;
+    border: 1px solid #756d6d;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 87%;
+    border: 1px solid #756d6d;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    max-width: 87%;
+    border: 1px solid #756d6d;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    max-width: 87%;
+    border: 1px solid #756d6d;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .card {
+    max-width: 87%;
+    border: 1px solid #756d6d;
+  }
+}
+
+.spinner {
+  padding-top: 200px;
+}
+
+.card-image {
+  background: black;
+  object-fit: fill;
+  margin: 0px -16px 0px -16px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Yoav';
+  font-size: x-large;
+}
+
+.card-subtitle {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-subtitle-category {
+  font-family: 'Yoav';
+}
+
+.card-content {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-action {
+  text-align: center;
+}
+
+.card-action-button {
+  font-family: 'Abraham';
+  background: green;
+
+}
+
+.user-avatar {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}

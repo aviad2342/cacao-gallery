@@ -34,7 +34,7 @@
         [matMenuTriggerFor]="menu"
       />
       <mat-menu #menu="matMenu">
-        <button class="menu-button" mat-menu-item (click)="Login()"><mat-icon  class="icon-align">login</mat-icon>התחבר</button>
+        <button class="menu-button" mat-menu-item routerLink="auth"><mat-icon  class="icon-align">login</mat-icon>התחבר</button>
         <button class="menu-button" mat-menu-item routerLink="video"><mat-icon  class="icon-align">manage_accounts</mat-icon>ניהול</button>
         <button class="menu-button" mat-menu-item (click)="Logout()"><mat-icon routerLinkActive="active-nav-link" class="icon-align">logout</mat-icon>יציאה</button>
       </mat-menu>

@@ -29,6 +29,8 @@ export class MainNavComponent {
 
   Login() {}
 
-  Logout() {}
+  Logout() {
+    this.authService.logout();
+  }
 
 }

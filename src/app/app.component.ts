@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,9 @@ export class AppComponent implements OnInit, OnDestroy {
   mediaSub: Subscription;
   deviceXs: boolean;
 
-  constructor( public mediaObserver: MediaObserver) {}
+  constructor( private authService: AuthService, public mediaObserver: MediaObserver) {}
   ngOnInit() {
+    this.authService.autoLogin();
     // this.mediaSub = this.mediaObserver.media$.subscribe((res: MediaChange) => {
     //   this.deviceXs = res.mqAlias === 'xs' ? true : false;
     // });

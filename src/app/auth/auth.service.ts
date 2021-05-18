@@ -79,6 +79,9 @@ export class AuthService implements OnDestroy {
 
   autoLogin() {
     const user = this.getAuthData();
+    if (!user) {
+      return;
+    }
     if (user.tokenDuration < 0) {
           return null;
         }
@@ -93,6 +96,7 @@ export class AuthService implements OnDestroy {
     }
     this.authuser.next(null);
     this.clearAuthData();
+    this.router.navigate(['/']);
   }
 
 

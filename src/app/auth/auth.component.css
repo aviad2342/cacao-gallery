@@ -1,38 +1,8 @@
 
 
-@media screen and (max-width: 260px) {
-  .card {
-    max-width: 87%;
-    border: 1px solid #756d6d;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .card {
-    max-width: 87%;
-    border: 1px solid #756d6d;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .card {
-    max-width: 87%;
-    border: 1px solid #756d6d;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .card {
-    max-width: 87%;
-    border: 1px solid #756d6d;
-  }
-}
-
-@media screen and (max-width: 1900px) {
-  .card {
-    max-width: 87%;
-    border: 1px solid #756d6d;
-  }
+ .card {
+  min-width: 270px;
+  border: 1px solid #756d6d;
 }
 
 .spinner {
@@ -84,4 +54,5 @@
   margin-top: 15px;
   margin-bottom: 12px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  background: aliceblue;
 }

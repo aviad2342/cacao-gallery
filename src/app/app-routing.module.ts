@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ViewVideoComponent } from './video/view-video/view-video.component';
 import { ContactComponent } from './contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'video', component: VideoComponent },
+  { path: 'video', component: VideoComponent, canActivate: [AuthGuard] },
   { path: 'video/new', component: AddVideoComponent },
   { path: 'video/edit/:id', component: EditVideoComponent },
   { path: 'video/view/:id', component: ViewVideoComponent }

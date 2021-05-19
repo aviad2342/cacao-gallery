@@ -1,0 +1,100 @@
+
+.spinner {
+  padding-top: 200px;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.card {
+  border: 1px solid goldenrod;
+  background: url("../../assets/background/bgb5.jpg") no-repeat center, #fff;
+  background-size: 100% 100%;
+}
+
+.map-card {
+  padding: 0px;
+}
+
+iframe {
+  width: 300px;
+  vertical-align: bottom;
+}
+
+.card-image {
+  background: black;
+  object-fit: fill;
+  margin: 0px -16px 0px -16px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Choco-bold';
+  font-size: xx-large;
+}
+
+.contact-item {
+  font-family: 'choco';
+  font-size: initial;
+}
+
+.strong-email-link {
+  padding-top: 7px;
+  font-size: large;
+}
+
+.strong-phone-link {
+  padding-top: 2px;
+  font-size: large;
+}
+
+.strong-address-link {
+  padding-top: 2px;
+  font-size: large;
+}
+
+.email-link {
+  font-family: 'ZenDots';
+  color: aliceblue;
+  font-size: small;
+}
+
+.phone-link {
+  font-family: 'ZenDots';
+  color: aliceblue;
+  direction: ltr;
+  font-size: small;
+}
+
+.address-link {
+  font-family: 'Choco-bold';
+  font-size: larger;
+  color: aliceblue;
+}
+
+.card-subtitle {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-subtitle-category {
+  font-family: 'Yoav';
+}
+
+.card-content {
+  font-family: 'Yoav';
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.card-action {
+  text-align: center;
+}
+
+.card-action-button {
+  font-family: 'Abraham';
+  background: green;
+
+}

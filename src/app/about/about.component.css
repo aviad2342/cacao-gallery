@@ -31,3 +31,21 @@
 .strong-lb {
   color: #656060;
 }
+
+.about-me-title {
+  text-align: center;
+  font-family: 'Choco-bold';
+  font-size: xx-large;
+}
+
+.about-me-description {
+  font-family: 'ZenDots';
+  font-size: medium;
+  padding-top: 15px;
+}
+
+.about-me-footer {
+  font-family: 'ZenDots';
+  font-size: medium;
+  padding-top: 15px;
+}

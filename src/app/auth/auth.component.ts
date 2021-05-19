@@ -33,7 +33,7 @@ export class AuthComponent implements OnInit {
     this.authService.login(email, password).subscribe(
       resData => {
         this.isLoading = false;
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('video');
       },
       errRes => {
         const code = errRes.error.error;
